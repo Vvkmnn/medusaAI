@@ -7,25 +7,63 @@ ADMIN_ROLES = EnvService.get_admin_roles()
 DALLE_ROLES = EnvService.get_dalle_roles()
 GPT_ROLES = EnvService.get_gpt_roles()
 ALLOWED_GUILDS = EnvService.get_allowed_guilds()
+ALLOWED_CHANNELS = EnvService.get_allowed_guilds()
+# print(allowed_channels)
+
+# Allowed Channels
+# def check_channels() -> Callable():
+#     async def inner(ctx: discord.ApplicationContext):
+#         if ADMIN_ROLES == [None]:
+#             return True
+
+        #     if not any(role.name.lower() in ADMIN_ROLES for role in ctx.user.roles):
+        #         await ctx.defer(ephemeral=True)
+        #         await ctx.respond(
+        #             f"You don't have permission to use this.",
+        #             ephemeral=True,
+        #             delete_after=10,
+        #         )
+        #         return False
+        #     return True
+
+        # return inner
+
+    # def check_admin_roles() -> Callable:
+    #     async def inner(ctx: discord.ApplicationContext):
+    #         if ALLLOWED_CHANNELS== [None]:
+    #             return True
+
+    #         if not any(channel.name.lower() in ADMIN_ROLES for role in ctx.user.get_channel):
+    #             await ctx.defer(ephemeral=True)
+    #             await ctx.respond(
+    #                 f"You don't have permission to use this.",
+    #                 ephemeral=True,
+    #                 delete_after=10,
+    #             )
+    #             return False
+    #         return True
+
+    #     return inner
 
 
 class Check:
-    def check_admin_roles() -> Callable:
-        async def inner(ctx: discord.ApplicationContext):
-            if ADMIN_ROLES == [None]:
-                return True
 
-            if not any(role.name.lower() in ADMIN_ROLES for role in ctx.user.roles):
-                await ctx.defer(ephemeral=True)
-                await ctx.respond(
-                    f"You don't have permission to use this.",
-                    ephemeral=True,
-                    delete_after=10,
-                )
-                return False
-            return True
+    # def check_admin_roles() -> Callable:
+    #     async def inner(ctx: discord.ApplicationContext):
+    #         if ALLLOWED_CHANNELS== [None]:
+    #             return True
 
-        return inner
+    #         if not any(channel.name.lower() in ADMIN_ROLES for role in ctx.user.get_channel):
+    #             await ctx.defer(ephemeral=True)
+    #             await ctx.respond(
+    #                 f"You don't have permission to use this.",
+    #                 ephemeral=True,
+    #                 delete_after=10,
+    #             )
+    #             return False
+    #         return True
+
+    #     return inner
 
     def check_dalle_roles() -> Callable:
         async def inner(ctx: discord.ApplicationContext):
