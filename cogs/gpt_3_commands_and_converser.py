@@ -249,7 +249,7 @@ class GPT3ComCon(discord.Cog, name="GPT3ComCon"):
 
     async def send_help_text(self, ctx):
         embed = discord.Embed(
-            title="GPT3Bot Help", description="The current commands", color=0xC730C7
+            title="Medusa Help", description="The current commands", color=0xC730C7
         )
         embed.add_field(
             name="/gpt ask",
@@ -862,7 +862,7 @@ class GPT3ComCon(discord.Cog, name="GPT3ComCon"):
         )
 
     @discord.slash_command(
-        name="help", description="Get help for GPT3Discord", guild_ids=ALLOWED_GUILDS
+        name="help", description="Get help for Medusa", guild_ids=ALLOWED_GUILDS
     )
     @discord.guild_only()
     async def help(self, ctx: discord.ApplicationContext):
@@ -872,7 +872,7 @@ class GPT3ComCon(discord.Cog, name="GPT3ComCon"):
     @add_to_group("system")
     @discord.slash_command(
         name="usage",
-        description="Get usage statistics for GPT3Discord",
+        description="Get usage statistics for Medusa",
         guild_ids=ALLOWED_GUILDS,
     )
     @discord.guild_only()
@@ -883,7 +883,7 @@ class GPT3ComCon(discord.Cog, name="GPT3ComCon"):
     @add_to_group("system")
     @discord.slash_command(
         name="settings",
-        description="Get settings for GPT3Discord",
+        description="Get settings for Medusa",
         guild_ids=ALLOWED_GUILDS,
     )
     @discord.option(
